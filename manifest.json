@@ -11,11 +11,7 @@
   "permissions": [
    "activeTab",
    "tabs",
-   "<all_urls>"
-   ],
-
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+   "<all_urls>",
+   "storage"
+   ]
 }

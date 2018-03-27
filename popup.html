@@ -12,7 +12,14 @@
   <body>
     <form id="formAddReadingLog">
       <h2>Reading Logs</h2>
-      <input type="text" name="topic" id="readingTopic" required="required" placeholder="Add topic to this reference">
+      <div class="form-field-block">
+        <label for="topic">What are you sharing about?</label>
+        <input type="text" class="form-field" name="topic" id="topic" required="required">
+      </div>
+      <div class="form-field-block">
+        <label for="reader">Your Name</label>
+        <input type="text" class="form-field" name="reader" id="reader" required="required">
+      </div>
       <button type="button" id="submitReadingItem">Add this URL to Reading Logs!</button>
       <div id="submittedReadingItem">DONE!</button>
     </form>

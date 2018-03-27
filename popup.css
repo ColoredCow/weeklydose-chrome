@@ -40,9 +40,24 @@ form button {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
     -webkit-appearance: button;
+    outline: none;
 }
 
-#readingTopic {
+.form-field-block {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.form-field-block label {
+	display: block;
+	text-align: left!important;
+	/*font-weight: bold;*/
+	font-size: 0.9rem;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+
+.form-field {
 	display: block;
     width: 100%;
     padding: 10px 5px;

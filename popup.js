@@ -1,25 +1,24 @@
 function submitReadingForm(form) {
-  var readingData = {
-    "name" : "Pankaj Agarwal",
-    "email" : "vaibhav@coloredcow.com",
-    "job_title" : "Laravel Developer",
-    "resume" : "https://coloredcow.com"
-  };
-  console.log(readingData);
-
-  $.ajax({
-    // url: 'https://ccreading.dev/api/reading-items/create',
-    url: 'https://ccemployees.dev/api/hr/applicants/create',
-    method: 'POST',
-    data: readingData,
-    success: function(res) {
-      console.log('success');
-      $('#submitReadingItem').hide();
-      $('#submittedReadingItem').show();
-    },
-    error: function(err) {
-      console.log('error');
-    }
+  chrome.storage.sync.set({'cc_reader': $('#reader').val()}, function(){});
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    var url = tabs[0].url;
+    var readingData = {
+      "topic" : $('#topic').val(),
+      "url" : tabs[0].url,
+      "recommended_by" : $('#reader').val(),
+    };
+    $.ajax({
+      url: 'https://ccreading.dev/api/reading-items/new',
+      method: 'POST',
+      data: readingData,
+      success: function(res) {
+        $('#submitReadingItem').hide();
+        $('#submittedReadingItem').show();
+      },
+      error: function(err) {
+        alert('There was an error submitting! Please refresh the page and try again.');
+      }
+    });
   });
 }
 
@@ -33,5 +32,10 @@ function sendReadingLog() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  chrome.storage.sync.get(['cc_reader'], function(items) {
+    if (typeof items.cc_reader !== undefined) {
+      $('#reader').val(items.cc_reader);
+    }
+  });
   document.getElementById('submitReadingItem').addEventListener('click', sendReadingLog, false);
 });
