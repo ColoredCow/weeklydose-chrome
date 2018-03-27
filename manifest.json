@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "ColoredCow Reading Logs Plugin",
+  "description": "This extension sends the current tab URL to the ColoredCow Reading Portal",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "<all_urls>"
+   ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

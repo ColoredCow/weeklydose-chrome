@@ -1,0 +1,57 @@
+#formAddReadingLog {
+	width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+}
+
+#formAddReadingLog h2 {
+	margin-top: 0;
+}
+
+#submittedReadingItem {
+	display: none;
+	font-family: "Raleway", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #28a745;
+    text-align: left;
+    margin-top: 20px;
+}
+
+form button {
+	margin-top: 20px;
+	color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: .9rem;
+    line-height: 1.6;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -webkit-appearance: button;
+}
+
+#readingTopic {
+	display: block;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
