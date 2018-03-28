@@ -45,7 +45,7 @@ form button {
 
 .form-field-block {
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .form-field-block label {
@@ -76,4 +76,15 @@ form button {
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#share-link {
+    color: #007bff;
+    font-size: 0.9rem;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+textarea {
+    resize: none;
 }

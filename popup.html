@@ -11,16 +11,21 @@
   </head>
   <body>
     <form id="formAddReadingLog">
-      <h2>Reading Logs</h2>
+      <h2>ColoredCow WeeklyDose</h2>
       <div class="form-field-block">
-        <label for="topic">What are you sharing about?</label>
-        <input type="text" class="form-field" name="topic" id="topic" required="required">
+        <label>Sharing this link to weeklydose</label>
+        <p id="share-link"></p>
       </div>
       <div class="form-field-block">
-        <label for="reader">Your Name</label>
-        <input type="text" class="form-field" name="reader" id="reader" required="required">
+        <label for="description">What are you sharing about?</label>
+        <textarea name="description" id="description" rows="5" required="required" class="form-field" draggable="false"></textarea>
       </div>
-      <button type="button" id="submitReadingItem">Add this URL to Reading Logs!</button>
+      <div class="form-field-block">
+        <label for="recommended_by">Your Name</label>
+        <input type="text" class="form-field" name="recommended_by" id="recommended_by" required="required">
+      </div>
+      <input type="hidden" name="url" id="url" required="required">
+      <button type="button" id="submitReadingItem">Add to your WeeklyDose!</button>
       <div id="submittedReadingItem">DONE!</button>
     </form>
   </body>
