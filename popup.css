@@ -51,7 +51,6 @@ form button {
 .form-field-block label {
 	display: block;
 	text-align: left!important;
-	/*font-weight: bold;*/
 	font-size: 0.9rem;
 	line-height: 1;
 	margin-bottom: 5px;
@@ -69,4 +68,12 @@ form button {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-field:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
