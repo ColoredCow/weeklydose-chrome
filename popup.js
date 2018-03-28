@@ -8,7 +8,7 @@ function submitReadingForm(form) {
       "recommended_by" : $('#reader').val(),
     };
     $.ajax({
-      url: 'https://ccreading.dev/api/reading-items/new',
+      url: 'https://weeklydose.dev/api/reading-items/new',
       method: 'POST',
       data: readingData,
       success: function(res) {
