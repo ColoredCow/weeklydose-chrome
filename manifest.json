@@ -1,12 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "ColoredCow Reading Logs Plugin",
-  "description": "This extension sends the current tab URL to the ColoredCow Reading Portal",
+  "name": "ColoredCow WeeklyDose Plugin",
+  "description": "This extension sends the current tab URL to the ColoredCow WeeklyDose Service",
   "version": "1.0",
 
   "browser_action": {
-   "default_popup": "popup.html"
+   "default_popup": "popup.html",
+   "default_icon": "img/icon128.png"
   },
   "permissions": [
    "activeTab",
