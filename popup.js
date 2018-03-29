@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
-    $('#share-link').text(url);
+    $('#share_link').text(url);
     $('#url').val(url);
   });
   document.getElementById('submit_weeklydose').addEventListener('click', sendReadingLog, false);
