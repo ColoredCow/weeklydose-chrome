@@ -1,8 +1,7 @@
 function submitReadingForm(form) {
   chrome.storage.sync.set({'cc_reader': $('#recommended_by').val()}, function(){});
   $.ajax({
-    // url: 'https://weeklydose.coloredcow.com/api/reading-items/new',
-    url: 'https://ccweeklydose.dev/api/reading-items/new',
+    url: 'https://weeklydose.coloredcow.com/api/reading-items/new',
     method: 'POST',
     data: form.serialize(),
     success: function(res) {
