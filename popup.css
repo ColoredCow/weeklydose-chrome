@@ -1,4 +1,4 @@
-#formAddReadingLog {
+#form_add_weeklydose {
 	width: 350px;
 	display: flex;
 	align-items: center;
@@ -7,11 +7,11 @@
 	padding: 30px;
 }
 
-#formAddReadingLog h2 {
+#form_add_weeklydose h2 {
 	margin-top: 0;
 }
 
-#submittedReadingItem {
+#submitted_weeklydose {
 	display: none;
 	font-family: "Raleway", sans-serif;
     font-size: 0.9rem;

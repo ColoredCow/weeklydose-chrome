@@ -1,12 +1,12 @@
 function submitReadingForm(form) {
   chrome.storage.sync.set({'cc_reader': $('#recommended_by').val()}, function(){});
   $.ajax({
-    url: 'https://ccweeklydose.dev/api/reading-items/new',
+    url: 'https://weeklydose.coloredcow.com/api/reading-items/new',
     method: 'POST',
     data: form.serialize(),
     success: function(res) {
-      $('#submitReadingItem').hide();
-      $('#submittedReadingItem').show();
+      $('#submit_weeklydose').hide();
+      $('#submitted_weeklydose').show();
     },
     error: function(err) {
       alert('There was an error submitting! Please refresh the page and try again.');
@@ -15,7 +15,7 @@ function submitReadingForm(form) {
 }
 
 function sendReadingLog(form) {
-  var form = $('#formAddReadingLog');
+  var form = $('#form_add_weeklydose');
   if (! form[0].checkValidity()) {
     form[0].reportValidity();
   } else {
@@ -34,5 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#share-link').text(url);
     $('#url').val(url);
   });
-  document.getElementById('submitReadingItem').addEventListener('click', sendReadingLog, false);
+  document.getElementById('submit_weeklydose').addEventListener('click', sendReadingLog, false);
 });
