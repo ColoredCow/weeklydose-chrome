@@ -1,5 +1,6 @@
 function submitReadingForm(form) {
   chrome.storage.sync.set({'cc_reader': $('#recommended_by').val()}, function(){});
+  $('#submit_weeklydose').prop('disabled', 'disabled').addClass('disabled');
   $.ajax({
     url: 'https://weeklydose.coloredcow.com/api/reading-items/new',
     method: 'POST',
@@ -9,7 +10,8 @@ function submitReadingForm(form) {
       $('#submitted_weeklydose').show();
     },
     error: function(err) {
-      alert('There was an error submitting! Please refresh the page and try again.');
+      $('#submit_weeklydose').hide();
+      $('#error_weeklydose').show();
     }
   });
 }

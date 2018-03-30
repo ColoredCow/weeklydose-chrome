@@ -11,15 +11,27 @@
 	margin-top: 0;
 }
 
-#submitted_weeklydose {
+.response-msg {
 	display: none;
 	font-family: "Raleway", sans-serif;
 	font-size: 0.9rem;
 	font-weight: 400;
 	line-height: 1.6;
-	color: #28a745;
 	text-align: left;
 	margin-top: 20px;
+}
+
+.disabled {
+	opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#submitted_weeklydose {
+	color: #28a745;
+}
+
+#error_weeklydose {
+	color: red;
 }
 
 form button {
