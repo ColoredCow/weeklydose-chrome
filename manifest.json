@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "ColoredCow WeeklyDose Plugin",
-  "description": "This extension sends the current tab URL to the ColoredCow WeeklyDose Service",
+  "name": "WeeklyDose by ColoredCow",
+  "description": "This extension sends the current tab URL to the WeeklyDose Service",
   "version": "1.0",
 
   "browser_action": {
