@@ -3,7 +3,7 @@ function submitReadingForm(form) {
   var service_url = '';
   chrome.storage.sync.get(['weeklydose_service_url'], function(items) {
     if (typeof items.weeklydose_service_url !== undefined) {
-      service_url = items.weeklydose_service_url + '/api/weeklydose';
+      service_url = items.weeklydose_service_url;
       $.ajax({
         url: service_url,
         method: 'POST',
