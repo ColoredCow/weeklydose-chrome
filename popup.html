@@ -13,11 +13,11 @@
 			<h2>Configure your settings</h2>
 			<div class="form-field-block">
 				<label for="settings_recommended_by">Your Name</label>
-				<input type="text" class="form-field" name="settings_recommended_by" id="settings_recommended_by" required="required">
+				<input type="text" class="form-field" name="settings_recommended_by" id="settings_recommended_by">
 			</div>
 			<div class="form-field-block">
 				<label for="settings_weeklydose_service_url">WeeklyDose Service URL</label>
-				<input type="url" class="form-field" name="settings_weeklydose_service_url" id="settings_weeklydose_service_url" required="required">
+				<input type="url" class="form-field" name="settings_weeklydose_service_url" id="settings_weeklydose_service_url">
 			</div>
 			<button type="button" id="save_weeklydose_settings">Save Settings</button>
 			<div class="response-msg" id="saved_settings">Saved!</div>
@@ -25,6 +25,7 @@
 		</form>
 		<form id="form_add_weeklydose">
 			<h2>ColoredCow WeeklyDose</h2>
+			<div class="error-banner hidden">There are some errors in your settings. Please click on the settings icon and save proper settings.</div>
 			<div class="form-field-block">
 				<label>Sharing this link to weeklydose</label>
 				<p id="share_link"></p>
