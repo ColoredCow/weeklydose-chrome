@@ -1,15 +1,3 @@
-#form_add_weeklydose {
-	width: 350px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-}
-
-#form_add_weeklydose h2 {
-	margin-top: 0;
-}
 
 .response-msg {
 	display: none;
@@ -26,11 +14,13 @@
     cursor: not-allowed;
 }
 
-#submitted_weeklydose {
+#submitted_weeklydose,
+#saved_settings {
 	color: #28a745;
 }
 
-#error_weeklydose {
+#error_weeklydose,
+#errored_settings {
 	color: red;
 }
 
@@ -99,4 +89,38 @@ form button {
 
 textarea {
 	resize: none;
+}
+
+.settings-weeklydose {
+    position: absolute;
+    display: block;
+    right: 15px;
+    cursor: pointer;
+
+    &.show-settings {
+	    height: 20px;
+	    width: 20px;
+    }
+
+    &.hide-settings {
+    	font-size: 20px;
+    	line-height: 1;
+    }
+}
+
+.hidden {
+	display: none !important;
+}
+
+form {
+	width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+
+    h2 {
+		margin-top: 0;
+	}
 }
