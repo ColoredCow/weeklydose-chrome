@@ -3,7 +3,7 @@
 
   "name": "WeeklyDose by ColoredCow",
   "description": "This extension sends the current tab URL to the WeeklyDose Service",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "browser_action": {
    "default_popup": "popup.html",
