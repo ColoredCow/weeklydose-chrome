@@ -62,8 +62,8 @@ function saveSettings() {
 function setConfigs() {
   chrome.storage.sync.get(['username', 'weeklydose_service_url'], function(items) {
 
-    if (typeof items.username == undefined
-      || typeof items.weeklydose_service_url == undefined
+    if (! items.hasOwnProperty('username')
+      || ! items.hasOwnProperty('weeklydose_service_url')
       || items.username == ''
       || items.weeklydose_service_url == '') {
       $('#submit_weeklydose').prop('disabled', 'disabled').addClass('disabled');
